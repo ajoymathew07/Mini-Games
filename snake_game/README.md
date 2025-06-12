@@ -45,10 +45,21 @@ A simple console-based **Snake game** implemented in **C++**, developed as part 
 ```bash
 g++ -o snake.exe main.cpp snake.cpp -std=c++17
 ```
-### On Linux (Using g++)
-You will need to replace conio.h and windows.h with portable alternatives (see Cross-platform Notes).
+### 🐧 On Linux / macOS
+⚠️ Requires replacing conio.h and windows.h with portable alternatives.
 
+🔧 Compile using g++
 ``` bash
 g++ -o snake main.cpp snake.cpp -std=c++17
 
+```
+🔧 Or Compile and Run using Make
+
+``` bash
+make
+./snake
+```
+To clean the build:
+``` bash
+make clean
 ```

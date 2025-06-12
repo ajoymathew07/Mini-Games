@@ -4,7 +4,7 @@
 #include<windows.h> // For windows - Sleep()
 #include<conio.h>
 
-#include<snake.hpp>
+#include "snake.hpp"
 
 using namespace std;
 
@@ -46,6 +46,7 @@ void addFood(char** arr, int n){
 }
 int main(){
     srand(time(0));
+    cout<<"Enter Board Size: "<<endl;
     int n;
     cin>>n;
     Snake s;
@@ -63,7 +64,7 @@ int main(){
     addFood(arr,n);
     // Initializing game board
     s.markarray(arr,n);
-    s.printarray(arr,n);
+    printarray(arr,n);
     s.printHead(); 
     char c;
     cin>>c;
@@ -79,20 +80,22 @@ int main(){
         int u1=0;
         int r1=0;
         take_input(c,u1,r1);
+        // cout<<u1<< " "<<r1<<endl;
         if(s.isValid(u1,r1,arr,n)){
             if(s.move(u1,r1,arr,n)){ 
                 if(counter>150){
                 counter-=100;
-            }
+                }
             addFood(arr,n);
-            s.printarray(arr,n);
             //std::this_thread::sleep_for(std::chrono::milliseconds(300)); 
-            Sleep(counter);  
-            }else{
+            }
+            printarray(arr,n);
+            Sleep(counter);
+           
+        }else{
                 cout<<"Score: "<<s.size()<<endl;
                 break;
             }
-        }
     }
     s.makeempty();
     return 0;

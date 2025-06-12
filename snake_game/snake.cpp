@@ -1,5 +1,5 @@
-#include "Snake.hpp"
 #include <iostream>
+#include "snake.hpp"
 using namespace std;
 
 Node::Node(int i,int j){
@@ -35,6 +35,10 @@ Snake::Snake(){
         tail->next=n;
         tail=n;
 }
+void Snake:: printHead(){ 
+    cout<<head->row<<" "<<head->col<<endl;
+ }
+
 void Snake::markarray(char** arr,int n){
         
         Node* temp=head;
