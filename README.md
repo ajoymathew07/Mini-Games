@@ -38,7 +38,5 @@ A collection of simple console-based games written in **C++/ Python**, aimed at 
 - Cross-platform compilation
 - Game logic and rendering in terminal
 
----
 
-## 🛠️ How to Build and Run
-Each game resides in its own subdirectory (e.g., `snake_game`) with its own `Makefile`.
+
