@@ -1,7 +1,7 @@
 #include<iostream>
-
-#include <thread>  // for std::this_thread::sleep_for
-#include<windows.h>
+#include<chrono> // for std::this_thread::sleep_for (for crossplatform compatibility)
+#include <thread>  // for std::this_thread::sleep_for (for crossplatform compatibility)
+#include<windows.h> // For windows - Sleep()
 #include<conio.h>
 
 #include<snake.hpp>
